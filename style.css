@@ -1,0 +1,234 @@
+/* ===================== Global Reset & Basics===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================== Header ===================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d5a;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.navbar a {
+  font-size: 18px;
+  margin-left: 25px;
+  color: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ff4d5a;
+}
+
+/* ===================== Intro Section ===================== */
+.intro {
+  min-height: 100vh;
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  perspective: 1200px; /* Enables 3D space */
+}
+
+.intro-content {
+  max-width: 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.intro-content h1 {
+  font-size: 48px;
+  color: #ff4d5a;
+}
+
+.intro-content h3 {
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.intro-content p {
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  font-size: 28px;
+  margin: 0 10px;
+  color: #fff;
+  transition: transform 0.4s, color 0.4s;
+}
+
+.social-media a:hover {
+  transform: translateY(-8px) scale(1.2) rotateY(15deg);
+  color: #ff4d5a;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff4d5a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 77, 90, 0.6);
+}
+
+/* Profile Picture 3D Tilt */
+.intro-img img {
+  width: 280px;                   /* Circle size */
+  height: 280px;                  /* Equal height = circle */
+  border-radius: 50%;             /* Circle shape */
+  object-fit: cover;              /* Keeps aspect ratio clean */
+  box-shadow: 0 0 30px rgba(255, 77, 90, 0.6);
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.intro-img img:hover {
+  transform: rotateY(-12deg) rotateX(8deg) scale(1.05);
+  box-shadow: 0 20px 45px rgba(255, 77, 90, 0.9);
+}
+
+
+/* ===================== Section Boxes (3D Hover) ===================== */
+.experience-box,
+.projects-box,
+.skills-box,
+.achievements-box,
+.education-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.experience-box:hover,
+.projects-box:hover,
+.skills-box:hover,
+.achievements-box:hover,
+.education-box:hover {
+  transform: rotateY(8deg) rotateX(5deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(255, 77, 90, 0.5);
+}
+
+/* ===================== Contact ===================== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-box {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.input-box input,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 280px;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* ===================== Footer ===================== */
+.footer {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: #ff4d5a;
+  font-size: 25px;
+}     
+.multiple-text {
+  transition: color 0.5s ease;
+  font-weight: bold;
+}
+
+/* Sliding Text Animation for Typed.js */
+.multiple-text {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #ff4d5a;
+  transition: color 0.5s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* Sliding Content Effect */
+.intro-content,
+.intro-img img {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
