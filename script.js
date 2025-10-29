@@ -24,7 +24,7 @@ const colors = ["#ff4d5a"];
 let colorIndex = 0;
 
 const typed = new Typed(".multiple-text", {
-  strings: ["Software Engineer", "Frontend Developer", "Web Designer"],
+  strings: ["Web Developer", "Full Stack Engineer", "Web Designer"],
   typeSpeed: 80,
   backSpeed: 60,
   backDelay: 2000,
@@ -54,3 +54,4 @@ ScrollReveal().reveal(".intro-content, .heading", { origin: "top" });
 ScrollReveal().reveal(".intro-img, .skills-box, .projects-box, .experience-box", { origin: "bottom" });
 ScrollReveal().reveal(".achievements-box, .education-box", { origin: "right" });
 ScrollReveal().reveal(".contact form", { origin: "left" });
+
