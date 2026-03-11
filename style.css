@@ -1,0 +1,728 @@
+/* ===================== Global Reset & Basics ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+        linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)),
+        url('https://image.shutterstock.com/image-photo/work-home-programmer-coding-code-260nw-2517144883.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===================== Header ===================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d5a;
+    text-decoration: none;
+}
+
+
+.navbar a {
+    font-size: 18px;
+    margin-left: 25px;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ff4d5a;
+}
+
+
+/* ===================== Intro Section ===================== */
+.intro {
+    min-height: 100vh;
+    padding: 120px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.intro-content {
+    max-width: 50%;
+}
+
+
+.intro-content h1 {
+    font-size: 48px;
+    color: #ff4d5a;
+}
+
+
+.intro-content h3 {
+    margin: 15px 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+
+.intro-content p {
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+
+.social-media a {
+    font-size: 28px;
+    margin: 0 10px;
+    color: #fff;
+    transition: transform 0.4s, color 0.4s;
+}
+
+
+.social-media a:hover {
+    transform: translateY(-8px) scale(1.2);
+    color: #ff4d5a;
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff4d5a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 77, 90, 0.6);
+}
+
+/* ===================== Profile Picture ===================== */
+.intro-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.intro-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(255, 77, 90, 0.6);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.intro-img img:hover {
+    transform: rotateY(-10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 20px 45px rgba(255, 77, 90, 0.9);
+}
+
+/* ===================== Sections ===================== */
+section {
+    padding: 80px 10%;
+}
+
+
+/* Glass Box */
+.glass-box {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.glass-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(255, 77, 90, 0.5);
+}
+
+/* ===================== Experience ===================== */
+.experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+/* Individual Experience Box */
+.experience-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Hover effect for interactivity */
+.experience-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Image styling — consistent with your design */
+.experience-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #c61e2a;
+    /* 🔴 Red border to match theme */
+    margin-bottom: 15px;
+}
+
+/* Title */
+.experience-box h1 {
+    color: #00ffff;
+    /* 🔴 Red highlight for role title */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Subheading and text */
+.experience-box h2 {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Location paragraph styling */
+.experience-box .location {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Section title style */
+#experience .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #c61e2a;
+    /* 🔴 Matches theme */
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #c61e2a;
+}
+
+
+/* ===================== Projects ===================== */
+#projects {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff4d5a;
+}
+
+/* Grid Layout */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Project Boxes */
+.project-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* height: 480px; ❌ Remove this fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 4px 20px rgba(196, 15, 15, 0.15);
+    padding-bottom: 20px;
+    /* ✅ Add space for buttons */
+}
+
+
+/* Glass effect */
+.glass-box {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Image styling */
+.project-box img {
+    width: 100%;
+    height: 230px;
+    /* ✅ Uniform image height */
+    object-fit: cover;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+/* Title and Description */
+.project-box h1 {
+    font-size: 2rem;
+    margin: 15px 10px 5px;
+    color: #00ffff;
+}
+
+.project-box h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
+    margin: 0 15px 20px;
+}
+
+/* Hover effect */
+.project-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+}
+
+/* --- Project GitHub Button --- */
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e50914;
+    color: #fff;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+.project-btn i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.project-btn:hover {
+    background: #ff3333;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 51, 51, 0.5);
+}
+
+/* ===== PROJECT BUTTON STYLING ===== */
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff004c, #ff7b00);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    background: linear-gradient(135deg, #ff7b00, #ff004c);
+    transform: scale(1.05);
+}
+
+.project-btn i {
+    font-size: 1.2rem;
+}
+
+
+
+
+/* ===================== Skills ===================== */
+.skills {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.skills .heading {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.skills .heading span {
+    color: #ff4d5a;
+}
+
+/* Vertically stacked layout */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Skill box design */
+.skill-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.skill-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255, 77, 90, 0.35);
+}
+
+/* Skill image */
+.skill-box img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #fff;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+/* Skill content */
+.skill-content {
+    text-align: left;
+}
+
+.skill-content h1 {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 5px;
+}
+
+.skill-content h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .skill-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .skill-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-content {
+        text-align: center;
+    }
+}
+
+/* ===================== CERTIFICATES SECTION ===================== */
+.certificates {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin: 50px auto;
+    width: 85%;
+}
+
+/* Red Main Heading */
+.certificates h1:first-child {
+    color: #ff4d5a;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Gallery Container */
+.certificate-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+/* Image */
+.certificate-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 25px;
+    border: 3px solid #ff4d5a;
+}
+
+/* Content area (push text down) */
+.certificate-content {
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Headings inside box */
+.certificate-box h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.certificate-box h1 {
+    color: #00ffff;
+    font-size: 1rem;
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+
+/* ===================== Education ===================== */
+.education {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.education .heading {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.education .heading span {
+    color: #ff4d5a;
+}
+
+/* Vertical stack - one by one */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Each education box */
+.education-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.education-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255, 77, 90, 0.35);
+}
+
+/* Education Image */
+.education-box img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+/* Text section */
+.edu-content {
+    text-align: left;
+}
+
+.edu-content h1 {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 5px;
+}
+
+.edu-content h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.edu-content .duration {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .education-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .education-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .edu-content {
+        text-align: center;
+    }
+}
+
+
+
+/* ===================== Footer ===================== */
+.footer {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.footer a {
+    color: #ff4d5a;
+    font-size: 25px;
+
+}
+
+/* ===================== Slide-in Animation ===================== */
+.multiple-text {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    will-change: transform, opacity;
+    /* ✅ performance improvement */
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ===================== Responsive Adjustments ===================== */
+@media (max-width: 992px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-content {
+        max-width: 100%;
+    }
+
+    .intro-img img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .intro-content h1 {
+        font-size: 36px;
+    }
+
+    .intro-content h3 {
+        font-size: 20px;
+    }
+
+    .multiple-text {
+        font-size: 20px;
+    }
+}
