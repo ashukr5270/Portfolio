@@ -1,6 +1,12 @@
 Portfolio:-
 (https://ashukr5270.github.io/Portfolio/)
 
+
+
+![Image_alt](https://github.com/ashukr5270/Portfolio/blob/main/Portfolio_Image.jpeg?raw=true)
+
+
+
 * “Passionate about building innovative solutions and continuously learning new technologies to solve real-world problems.” 🚀
 
 * “Driven by curiosity, powered by technology, and committed to creating impactful digital solutions.” 💻
