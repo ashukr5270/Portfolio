@@ -142,7 +142,7 @@ html {
 
 .intro-img img {
     width: 300px;
-    height: 250px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 30px rgba(255, 77, 90, 0.6);
@@ -727,3 +727,4 @@ section {
     }
 
 }
+
