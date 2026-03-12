@@ -24,7 +24,7 @@ const colors = ["#65ff4dff"];
 let colorIndex = 0;
 
 const typed = new Typed(".multiple-text", {
-  strings: ["Cloud Engineer", "Devops Engineer", "Cloud Architect"],
+  strings: ["Cloud Engineer", "Devops Engineer", "Cloud Architect", "Cloud Administrator"],
   typeSpeed: 80,
   backSpeed: 60,
   backDelay: 2000,
@@ -55,3 +55,4 @@ ScrollReveal().reveal(".intro-img, .skills-box, .projects-box, .experience-box",
 ScrollReveal().reveal(".achievements-box, .education-box", { origin: "right" });
 
 ScrollReveal().reveal(".contact form", { origin: "left" });
+
