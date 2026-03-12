@@ -56,3 +56,4 @@ ScrollReveal().reveal(".achievements-box, .education-box", { origin: "right" });
 
 ScrollReveal().reveal(".contact form", { origin: "left" });
 
+
