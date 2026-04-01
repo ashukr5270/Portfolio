@@ -3,7 +3,7 @@ Portfolio:-
 
 
 
-![Image_alt](https://github.com/ashukr5270/Portfolio/blob/main/Portfolio_Image.jpeg?raw=true)
+![Image_alt](https://github.com/ashukr5270/Portfolio/blob/main/Portfolio_Images.jpeg?raw=true)
 
 
 
