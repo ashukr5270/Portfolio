@@ -24,7 +24,7 @@ const colors = ["#65ff4dff"];
 let colorIndex = 0;
 
 const typed = new Typed(".multiple-text", {
-  strings: ["Cloud Engineer", "Solution Architect", "Devops Engineer"],
+  strings: ["Cloud Engineer", "Cloud Architect", "Cloud Consultant", "Cloud Adminstrator"],
   typeSpeed: 80,
   backSpeed: 60,
   backDelay: 2000,
