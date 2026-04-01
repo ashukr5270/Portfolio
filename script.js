@@ -24,7 +24,7 @@ const colors = ["#65ff4dff"];
 let colorIndex = 0;
 
 const typed = new Typed(".multiple-text", {
-  strings: ["Cloud Engineer", "Cloud Architect", "Cloud Consultant", "Cloud Administrator", "Cloud Support Engineer"],
+  strings: ["Cloud Engineer", "Solution Architect", "Devops Engineer"],
   typeSpeed: 80,
   backSpeed: 60,
   backDelay: 2000,
@@ -53,8 +53,4 @@ ScrollReveal({
 ScrollReveal().reveal(".intro-content, .heading", { origin: "top" });
 ScrollReveal().reveal(".intro-img, .skills-box, .projects-box, .experience-box", { origin: "bottom" });
 ScrollReveal().reveal(".achievements-box, .education-box", { origin: "right" });
-
 ScrollReveal().reveal(".contact form", { origin: "left" });
-
-
-
